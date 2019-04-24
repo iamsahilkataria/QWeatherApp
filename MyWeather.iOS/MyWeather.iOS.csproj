@@ -228,5 +228,53 @@
       <Name>MyWeather</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\sun.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\background.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\cloud.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\rain.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\bgNight.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\A50d.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\A10n.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\A10d.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\A04n.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\A04d.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\A03n.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\A03d.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\A02n.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\A02d.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\A01n.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\A01d.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>

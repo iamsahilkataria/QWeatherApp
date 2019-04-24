@@ -15,7 +15,8 @@ namespace MyWeather.Models
 
     public class Sys
     {
-
+        [JsonProperty("pod")]
+        public string Pod { get; set; } = string.Empty;
         [JsonProperty("country")]
         public string Country { get; set; } = string.Empty;
     }
@@ -102,7 +103,7 @@ namespace MyWeather.Models
         [JsonIgnore]
         public string DisplayTemp => $"Temp: {MainWeather?.Temperature ?? 0}° {Weather?[0]?.Main ?? string.Empty}";
         [JsonIgnore]
-        public string DisplayIcon => $"http://openweathermap.org/img/w/{Weather?[0]?.Icon}.png";
+        public string DisplayIcon => "A" + Weather[0].Icon + ".png";
     }
 
     public class WeatherForecastRoot

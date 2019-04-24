@@ -1,42 +1,21 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="MyWeather.View.WeatherView"
-             Title="Weather">
-    <StackLayout Padding="10" Spacing="10">
-        <Entry Text="{Binding Location}">
-            <Entry.Triggers>
-                <DataTrigger TargetType="Entry"
-                             Binding="{Binding UseGPS}"
-                             Value="true">
-                    <Setter Property="IsEnabled" Value="false"/>
-                </DataTrigger>
-            </Entry.Triggers>
-        </Entry>
-
-        <StackLayout Orientation="Horizontal" Spacing="10">
-            <Label Text="Use GPS" VerticalTextAlignment="Center" HorizontalOptions="EndAndExpand"/>
-            <Switch IsToggled="{Binding UseGPS}"/>
-        </StackLayout>
-
-        <StackLayout Orientation="Horizontal" Spacing="10">
-            <Label Text="Use Imperial" VerticalTextAlignment="Center" HorizontalOptions="EndAndExpand"/>
-            <Switch IsToggled="{Binding IsImperial}"/>
-        </StackLayout>
-
-
-        <Button Text="Get Weather" Command="{Binding GetWeatherCommand}"/>
-        <Label Text="{Binding Temp}" FontSize="24"/>
-        <Label Text="{Binding Condition}"/>
-        <ActivityIndicator IsVisible="{Binding IsBusy}" IsRunning="{Binding IsBusy}"/>
-    </StackLayout>
+             x:Class="MyWeather.View.WeatherView" 
+             NavigationPage.HasNavigationBar="False" >
+    <Grid Padding="10" RowSpacing="10" HorizontalOptions="Fill" VerticalOptions="Fill">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="30"/>
+        </Grid.RowDefinitions>
+        <Image Source="{Binding BackgroundImage}" Margin="-10" Grid.Row="0" Aspect="Fill" Grid.RowSpan="5" HorizontalOptions="Fill" VerticalOptions="Fill"/>
+        <Label Text="{Binding Place}" Grid.Row="0" HorizontalOptions="Center" VerticalOptions="End" TextColor="White" FontSize="26"/>
+        <Label Text="{Binding Date}" Grid.Row="1" HorizontalOptions="Center" VerticalOptions="Center" TextColor="White"/>
+        <Image Source="{Binding WeatherImage}" Grid.Row="2" HorizontalOptions="CenterAndExpand" VerticalOptions="FillAndExpand" HeightRequest="200" WidthRequest="200" Margin="15"/>
+        <Label Text="{Binding Temp}" Grid.Row="3" HorizontalOptions="Center" VerticalOptions="Center" FontSize="85" TextColor="White"/>
+        <Label Text="{Binding Condition}" Grid.Row="4" HorizontalOptions="Center" VerticalOptions="Center" FontSize="15" TextColor="White" />
+    </Grid>
 </ContentPage>
-
-
-
-
-
-
-
-
-

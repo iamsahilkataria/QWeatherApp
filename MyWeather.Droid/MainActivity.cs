@@ -16,18 +16,18 @@ namespace MyWeather.Droid
     public class MainActivity : FormsAppCompatActivity
     {
 
-		protected override void OnCreate (Bundle bundle)
-		{
-		    ToolbarResource = Resource.Layout.Toolbar;
-		    TabLayoutResource = Resource.Layout.Tabbar;
+        protected override void OnCreate(Bundle bundle)
+        {
+            ToolbarResource = Resource.Layout.Toolbar;
+            TabLayoutResource = Resource.Layout.Tabbar;
 
-		    base.OnCreate (bundle);
+            base.OnCreate(bundle);
             Xamarin.Essentials.Platform.Init(this, bundle);
             CrossCurrentActivity.Current.Init(this, bundle);
             Forms.Init(this, bundle);
-		
-		    LoadApplication(new App());
-            
+
+            LoadApplication(new App());
+
         }
 
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, Permission[] grantResults)

@@ -2,17 +2,17 @@
 <TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
             xmlns:views="clr-namespace:MyWeather.View"
-            xmlns:viewmodels="clr-namespace:MyWeather.ViewModels"
-             x:Class="MyWeather.View.MainTabs"
-            Title="My Weather"
+            xmlns:viewmodels="clr-namespace:MyWeather.ViewModels" NavigationPage.HasNavigationBar="False"
+            BarBackgroundColor="White"
+            x:Class="MyWeather.View.MainTabs"
             xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
             android:TabbedPage.ToolbarPlacement="Bottom">
-  <!--Pages can be added as references or inline-->
+    <!--Pages can be added as references or inline-->
     <TabbedPage.BindingContext>
         <viewmodels:WeatherViewModel/>
     </TabbedPage.BindingContext>
 
-    <views:WeatherView/>
+    <views:WeatherView Title="Weather"/>
     <views:ForecastView/>
 
 </TabbedPage>
